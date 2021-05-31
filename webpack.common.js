@@ -6,7 +6,7 @@ module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"), 
   output: {
     path: path.join(__dirname, outputDir),
-    filename: "[name].js",
+    filename: "index.js",
     publicPath: "/dist/",
   },
   resolve: {
@@ -82,7 +82,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
-      filename: "[name].css",
+      filename: "index.scss",
       chunkFilename: "[id].css",
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
