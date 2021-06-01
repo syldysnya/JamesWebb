@@ -1,7 +1,8 @@
 # James Webb Space Telescope
 
 ## Background and Overview
-Webb will be the largest, most powerful and complex space telescope ever built and launched into space. It will fundamentally alter our understanding of the universe. (c)
+*Webb will be the largest, most powerful and complex space telescope ever built and launched into space. It will fundamentally alter our understanding of the universe. (c)*
+
 This project is created to countdown until launch time and provide users with information about this ambitious project.
 
 ## Functionality and MVPs 
