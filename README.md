@@ -24,10 +24,12 @@ User will see a short information about this project and links to a developer pa
 - DOM manipulation
 
 ### Wireframes
-- [Wireframe.cc](https://wireframe.cc/)
+![Annotation 2021-06-01 121351](https://user-images.githubusercontent.com/78821780/120356935-dd7fe800-c2d2-11eb-9e8e-89f27614b124.png)
+
 
 ### Implementation Timeline 
 - Setting up environment for a project, reading documentations (1 day)
 - A countdown info panel (0.5 day)
-- D3 data visualization (1 day)
-- CSS, JavScript (1 day)
+- D3 data visualization (2 days)
+- CSS (0.5 day)
+- JavScript (1 day)
