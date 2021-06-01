@@ -24,7 +24,10 @@ User will see a short information about this project and links to a developer pa
 - DOM manipulation
 
 ### Wireframes
-In progress
+- [Wireframe.cc](https://wireframe.cc/)
 
 ### Implementation Timeline 
-In progress
+- Setting up environment for a project, reading documentations (1 day)
+- A countdown info panel (0.5 day)
+- D3 data visualization (1 day)
+- CSS, JavScript (1 day)
