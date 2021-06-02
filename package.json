@@ -1,12 +1,17 @@
 {
   "name": "jameswebb",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Js project",
+  "main": "index.js",
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "not dead"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --mode=development",
-    "build": "webpack --mode=production"
+    "serve": "NODE_ENV=development webpack server --config webpack.dev.js ",
+    "watch": "NODE_ENV=development webpack --watch --config webpack.dev.js ",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
