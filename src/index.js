@@ -1,16 +1,33 @@
 import "./styles/index.scss";
 
-const canvas = document.querySelector('#canvas').getContext('2d'),side = 0,
-    size = 100,
-    x = 100,
-    y = 100;
+const centerCell = document.getElementById('toggle');
 
-canvas.beginPath();
-canvas.moveTo(x + size * Math.cos(0), y + size * Math.sin(0));
+let i = document.getElementById('menu').childNodes;
 
-for (side; side < 7; side++) {
-  canvas.lineTo(x + size * Math.cos(side * 2 * Math.PI / 6), y + size * Math.sin(side * 2 * Math.PI / 6));
-}
+centerCell.addEventListener('click', function () {
 
-canvas.fillStyle = "#fffff";
-canvas.fill();
+    this.classList.add("transparent")
+
+    i[1].style.transform = 'translateY(-146px)';
+    i[3].style.transform = 'translate(125px, -73px)';
+    i[5].style.transform = 'translate(125px, 73px)';
+    i[7].style.transform = 'translateY(146px)';
+    i[9].style.transform = 'translate(-125px, 73px)';
+    i[11].style.transform = 'translate(-125px, -73px)';
+    
+    i[13].style.transform = 'translateY(-292px)';
+    i[15].style.transform = 'translate(125px, -219px)';
+    i[17].style.transform = 'translate(250px, -146px)';
+    i[19].style.transform = 'translate(250px, 0px)';
+    i[21].style.transform = 'translate(250px, 146px)';
+    i[23].style.transform = 'translate(125px, 219px)';
+    i[25].style.transform = 'translateY(291px)';
+    i[27].style.transform = 'translate(-125px, 219px)';
+    i[29].style.transform = 'translate(-250px, 146px)';
+    i[31].style.transform = 'translate(-250px, 0px)';
+    i[33].style.transform = 'translate(-250px, -146px)';
+    i[35].style.transform = 'translate(-125px, -219px)';
+});
+
+// centerCell.addEventListener('click', togglecells())
+// console.log(i)
