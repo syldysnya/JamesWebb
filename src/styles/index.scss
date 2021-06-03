@@ -6,19 +6,17 @@ body {
     background-image: url('../images/background-space.jpg');
     padding: 0;
     margin: 0;
-
 }
 
 .hexagon-box, .menu {
-    width: 70vh;
-    height: 70vh;
+    width: 80vh;
+    height: 80vh;
     position: absolute;
     margin: auto;
-    top: 10vh;
+    top: 5vh;
     bottom: 0;
     left: 0;
     right: 0;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,9 +35,9 @@ body {
 .toggle {
     width: 8vh;
     height: 0;
-    border-bottom: 7vh solid $color;
-    border-left: 4vh solid transparent;
-    border-right: 4vh solid transparent;
+    border-bottom: 8vh solid $color;
+    border-left: 5vh solid transparent;
+    border-right: 5vh solid transparent;
     position: absolute;
 }
 
@@ -47,12 +45,12 @@ body {
     content: '';
     width: 8vh;
     height: 0;
-    border-top: 7vh solid $color;
-    border-left: 4vh solid transparent;
-    border-right: 4vh solid transparent;
+    border-top: 8vh solid $color;
+    border-left: 5vh solid transparent;
+    border-right: 5vh solid transparent;
     position: absolute;
-    top: 6.8vh;
-    left: -4vh;
+    top: 7.9vh;
+    left: -5vh;
 }
 
 .transparent {
@@ -62,31 +60,48 @@ body {
 .cell {
     width: 8vh;
     height: 0;
-    border-bottom:7vh solid $color;
-    border-left: 4vh solid transparent;
-    border-right: 4vh solid transparent;
+    border-bottom: 8vh solid $color;
+    border-left: 5vh solid transparent;
+    border-right: 5vh solid transparent;
     position: absolute;
+    transition: 1s;
+    cursor: pointer;
 }
 
 .cell:before {
     content: '';
     width: 8vh;
     height: 0;
-    border-top: 7vh solid $color;
-    border-left: 4vh solid transparent;
-    border-right: 4vh solid transparent;
+    border-top: 8vh solid $color;
+    border-left: 5vh solid transparent;
+    border-right: 5vh solid transparent;
     position: absolute;
-    top: 6.8vh;
-    left: -4vh;
+    top: 7.9vh;
+    left: -5vh;
 }
 
-.countdown {
+.count-timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translate3d(-100%, 0, 0);
+    position: absolute;
+    top: 5.4vh;
+    left: 11vh;
+    width: 14vh;
+    height: 5vh;
+    align-items: center;
+    font-size: 140%;
+    font-weight: bold;
+}
+
+#countdown {
     width: 30%;
     height: 18%;
     color: white;
     position: absolute;
     margin: auto;
-    top: -80vh;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -97,23 +112,26 @@ body {
     font-size: 4vh;
     background-color: $count-color;
     border-radius: 1vh;
+    font-family: $font;
+    visibility: hidden;
+    
+    .title {
+        padding: 2%;
+    }
+    .count-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .count-timer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 4vh;
+        padding: 2%;
+    }
 }
 
-.title {
-    padding: 2%;
-}
-.count-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.count-timer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 4vh;
-    padding: 2%;
-}
 

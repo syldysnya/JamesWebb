@@ -10,27 +10,6 @@
 </head>
 
 <body>
-    <div class="countdown" id="countdown">
-        <div class="title">Until launch:</div>
-        <div class="count-timer">
-            <div class="count-box">
-                <div class="timer" id="days"></div> 00
-                <small>days</small>
-            </div>
-            <div class="count-box">
-                <div class="timer" id="hours"></div> 00
-                <small>hours</small>
-            </div>
-            <div class="count-box">
-                <div class="timer" id="mins"></div> 00
-                <small>mins</small>
-            </div>
-            <div class="count-box">
-                <div class="timer" id="secs"></div> 00
-                <small>secs</small>
-            </div>
-        </div>
-    </div>
     <div class="hexagon-box">
         <div class="toggle" id="toggle">
         </div>
@@ -46,7 +25,46 @@
         
         <div class="cell"></div>
         <div class="cell"></div>
-        <div class="cell"></div>
+        <div class="cell" id="count-cell">
+            <div class="count-timer">
+                <div class="count-box">
+                    <div class="timer" id="days"></div>
+                </div>
+                <span>:</span>
+                <div class="count-box">
+                    <div class="timer" id="hours"></div> 
+                </div>
+                <span>:</span>
+                <div class="count-box">
+                    <div class="timer" id="mins"></div>
+                </div>
+                <span>:</span>
+                <div class="count-box">
+                    <div class="timer" id="secs"></div>
+                </div>
+            </div>
+            <div class="countdown" id="countdown">
+                <div class="title">Until launch:</div>
+                <div id="count-timer-max">
+                    <div class="count-box">
+                        <div class="timer" id="days"></div>
+                        <small>days</small>
+                    </div>
+                    <div class="count-box">
+                        <div class="timer" id="hours"></div> 
+                        <small>hours</small>
+                    </div>
+                    <div class="count-box">
+                        <div class="timer" id="mins"></div>
+                        <small>mins</small>
+                    </div>
+                    <div class="count-box">
+                        <div class="timer" id="secs"></div>
+                        <small>secs</small>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="cell"></div>
         <div class="cell"></div>
         <div class="cell"></div>
