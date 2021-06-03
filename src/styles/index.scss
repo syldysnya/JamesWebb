@@ -1,22 +1,27 @@
-$color: goldenrod;
+$color: #ca0;
 $font: 'Fjalla One', sans-serif;
+$count-color: rgba(204, 170, 0, 0.2);
 
 body {
     background-image: url('../images/background-space.jpg');
     padding: 0;
     margin: 0;
+
 }
 
 .hexagon-box, .menu {
-    width: 160px;
-    height: 140px;
+    width: 70vh;
+    height: 70vh;
     position: absolute;
     margin: auto;
-    top: 0;
+    top: 10vh;
     bottom: 0;
     left: 0;
     right: 0;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .line {
@@ -30,24 +35,24 @@ body {
 }
 
 .toggle {
-    width: 80px;
+    width: 8vh;
     height: 0;
-    border-bottom: 70px solid $color;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
+    border-bottom: 7vh solid $color;
+    border-left: 4vh solid transparent;
+    border-right: 4vh solid transparent;
     position: absolute;
 }
 
 .toggle:before {
     content: '';
-    width: 80px;
+    width: 8vh;
     height: 0;
-    border-top: 70px solid $color;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
+    border-top: 7vh solid $color;
+    border-left: 4vh solid transparent;
+    border-right: 4vh solid transparent;
     position: absolute;
-    top: 70px;
-    left: -40px;
+    top: 6.8vh;
+    left: -4vh;
 }
 
 .transparent {
@@ -55,23 +60,60 @@ body {
 }
 
 .cell {
-    width: 80px;
+    width: 8vh;
     height: 0;
-    border-bottom: 70px solid $color;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
+    border-bottom:7vh solid $color;
+    border-left: 4vh solid transparent;
+    border-right: 4vh solid transparent;
     position: absolute;
 }
 
 .cell:before {
     content: '';
-    width: 80px;
+    width: 8vh;
     height: 0;
-    border-top: 70px solid $color;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
+    border-top: 7vh solid $color;
+    border-left: 4vh solid transparent;
+    border-right: 4vh solid transparent;
     position: absolute;
-    top: 70px;
-    left: -40px;
+    top: 6.8vh;
+    left: -4vh;
+}
+
+.countdown {
+    width: 30%;
+    height: 18%;
+    color: white;
+    position: absolute;
+    margin: auto;
+    top: -80vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-rows: 6vh 10vh;
+    row-gap: 1vh;
+    text-align: center;
+    font-size: 4vh;
+    background-color: $count-color;
+    border-radius: 1vh;
+}
+
+.title {
+    padding: 2%;
+}
+.count-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.count-timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 4vh;
+    padding: 2%;
 }
 
