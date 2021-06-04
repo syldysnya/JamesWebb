@@ -1,34 +1,42 @@
 import "./styles/index.scss";
 
-const centerCell = document.getElementById('toggle');
+const centerCell = document.getElementById('cell-toggle');
 
-let i = document.getElementById('menu').childNodes;
+let cells = document.getElementById('hexagon-box')
+let i = cells.childNodes;
 
-centerCell.addEventListener('click', function () {
+// centerCell.addEventListener('click', function () {
 
-    this.classList.toggle("transparent")
+//     this.classList.add("transparent");
+//     console.log(i)
 
-    i[1].style.transform = 'translateY(-16.5vh)';
-    i[3].style.transform = 'translate(13.6vh, -103%)';
-    i[5].style.transform = 'translate(13.6vh, 103%)';
-    i[7].style.transform = 'translateY(16.5vh)';
-    i[9].style.transform = 'translate(-13.6vh, 103%)';
-    i[11].style.transform = 'translate(-13.6vh, -103%)';
+    i[3].style.transform = 'translate(271.5%, 150%)';
+    i[3].style.visibility = 'visible';
+    i[5].style.transform = 'translate(323%, -28%)';
+    i[5].style.visibility = 'visible';
+    i[7].style.transform = 'translate(13.6vh, 103%)';
+    i[7].style.visibility = 'visible';
+    i[9].style.transform = 'translate(478%, -150%)';
+    i[9].style.visibility = 'visible';
+    // i[9].style.transform = 'translate(-13.6vh, 103%)';
+    // i[9].style.visibility = 'visible';
+    // i[11].style.transform = 'translate(-13.6vh, -103%)';
+    // i[11].style.visibility = 'visible';
     
-    i[13].style.transform = 'translateY(-33.1vh)';
-    i[15].style.transform = 'translate(13.6vh, -310%)';
-    i[17].style.transform = 'translate(27.2vh, -207%)';
-    i[19].style.transform = 'translate(27.2vh, 0%)';
-    i[21].style.transform = 'translate(27.2vh, 207%)';
-    i[23].style.transform = 'translate(13.6vh, 310%)';
-    i[25].style.transform = 'translateY(33.1vh)';
-    i[27].style.transform = 'translate(-13.6vh, 310%)';
-    i[29].style.transform = 'translate(-27.2vh, 207%)';
-    i[31].style.transform = 'translate(-27.2vh, 0%)';
-    i[33].style.transform = 'translate(-27.2vh, -207%)';
-    i[35].style.transform = 'translate(-13.6vh, -310%)';
+    i[15].style.transform = 'translateY(-33.1vh)';
+    i[17].style.transform = 'translate(13.6vh, -310%)';
+    i[19].style.transform = 'translate(27.2vh, -207%)';
+    i[21].style.transform = 'translate(27.2vh, 0%)';
+    i[23].style.transform = 'translate(27.2vh, 207%)';
+    i[25].style.transform = 'translate(13.6vh, 310%)';
+    i[27].style.transform = 'translateY(33.1vh)';
+    i[29].style.transform = 'translate(-13.6vh, 310%)';
+    i[31].style.transform = 'translate(-27.2vh, 207%)';
+    i[33].style.transform = 'translate(-27.2vh, 0%)';
+    i[35].style.transform = 'translate(-27.2vh, -207%)';
+    i[37].style.transform = 'translate(-13.6vh, -310%)';
 
-});
+// });
 
 const launch = '31 Oct 2021';
 const daysEle = document.getElementById('days');
@@ -61,6 +69,7 @@ const cellCount = document.getElementById('count-cell');
 
 cellCount.addEventListener('onmouseover', function() {
     document.getElementById('countdown').style.visibility = 'visible';
+    console.log(document.getElementById('countdown'))
 });
 
 // cellCount.addEventListener('mouseover', function() {

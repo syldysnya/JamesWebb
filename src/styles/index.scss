@@ -1,83 +1,39 @@
-$color: #ca0;
+$color: #ccaa00;
 $font: 'Fjalla One', sans-serif;
 $count-color: rgba(204, 170, 0, 0.2);
 
 body {
     background-image: url('../images/background-space.jpg');
-    padding: 0;
-    margin: 0;
 }
 
-.hexagon-box, .menu {
-    width: 80vh;
+.hexagon-box {
+    width: 100vh;
     height: 80vh;
-    position: absolute;
-    margin: auto;
-    top: 5vh;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.line {
-    border-bottom: 1px solid white;
+.cell, .cell-toggle {
+    width: 12vh;
+    height: 14vh;
     position: relative;
-    top: 670px;
+    text-align: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color: $color;
+    cursor: pointer;
 }
 
-.menu {
-    z-index: -1;
-}
-
-.toggle {
-    width: 8vh;
-    height: 0;
-    border-bottom: 8vh solid $color;
-    border-left: 5vh solid transparent;
-    border-right: 5vh solid transparent;
-    position: absolute;
-}
-
-.toggle:before {
-    content: '';
-    width: 8vh;
-    height: 0;
-    border-top: 8vh solid $color;
-    border-left: 5vh solid transparent;
-    border-right: 5vh solid transparent;
-    position: absolute;
-    top: 7.9vh;
-    left: -5vh;
+.cell {
+    visibility: hidden;
+    z-index: 1;
 }
 
 .transparent {
     display: none;
 }
 
-.cell {
-    width: 8vh;
-    height: 0;
-    border-bottom: 8vh solid $color;
-    border-left: 5vh solid transparent;
-    border-right: 5vh solid transparent;
-    position: absolute;
-    transition: 1s;
-    cursor: pointer;
-}
-
-.cell:before {
-    content: '';
-    width: 8vh;
-    height: 0;
-    border-top: 8vh solid $color;
-    border-left: 5vh solid transparent;
-    border-right: 5vh solid transparent;
-    position: absolute;
-    top: 7.9vh;
-    left: -5vh;
+.cell-toggle {
+    z-index: 1;
+    top: 35vh;
+    left: 45vh;
 }
 
 .count-timer {
