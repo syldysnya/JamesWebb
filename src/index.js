@@ -116,4 +116,5 @@ cellCount.addEventListener('mouseover', function() {
 
 cellCount.addEventListener('mouseout', function() {
     document.getElementById('countdown').style.visibility = 'hidden';
-})
+});
+
