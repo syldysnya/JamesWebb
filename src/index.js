@@ -5,78 +5,73 @@ const centerCell = document.getElementById('cell-toggle');
 let cells = document.getElementById('cells')
 let i = cells.childNodes;
 
-i[1].style.transform = 'translate(366%, 193%)';
-i[3].style.transform = 'translate(366%, 93%)';
-i[5].style.transform = 'translate(366.6%, -6.7%)';
-i[7].style.transform = 'translate(366.6%, -106.6%)';
-i[9].style.transform = 'translate(366.6%, -206.6%)';
-i[11].style.transform = 'translate(366.6%, -306.7%)';
+i[1].style.transform = 'translate(307%, 242%)';
+i[3].style.transform = 'translate(307%, 142%)';
+i[5].style.transform = 'translate(307%, 42%)';
+i[7].style.transform = 'translate(307%, -58%)';
+i[9].style.transform = 'translate(307%, -158%)';
+i[11].style.transform = 'translate(307%, -258%)';
 
-i[13].style.transform = 'translate(366.6%, -406.5%)';
-i[15].style.transform = 'translate(366.6%, -507%)';
-i[17].style.transform = 'translate(366.6%, -607%)';
-i[19].style.transform = 'translate(366.6%, -707%)';
-i[21].style.transform = 'translate(366.6%, -807%)';
-i[23].style.transform = 'translate(366.6%, -907%)';
-i[25].style.transform = 'translate(366.6%, -1007%)';
-i[27].style.transform = 'translate(366.6%, -1107%)';
-i[29].style.transform = 'translate(366.6%, -1207%)';
-i[31].style.transform = 'translate(366.6%, -1307%)';
-i[33].style.transform = 'translate(366.6%, -1407%)';
-i[35].style.transform = 'translate(366.6%, -1507%)';
+i[13].style.transform = 'translate(307%, -358%)';
+i[15].style.transform = 'translate(307%, -458%)';
+i[17].style.transform = 'translate(307%, -558%)';
+i[19].style.transform = 'translate(307%, -658%)';
+i[21].style.transform = 'translate(307%, -758%)';
+i[23].style.transform = 'translate(307%, -858%)';
+i[25].style.transform = 'translate(307%, -958%)';
+i[27].style.transform = 'translate(307%, -1058%)';
+i[29].style.transform = 'translate(307%, -1158%)';
+i[31].style.transform = 'translate(307%, -1258%)';
+i[33].style.transform = 'translate(307%, -1358%)';
+i[35].style.transform = 'translate(307%, -1458%)';
 
 
 centerCell.addEventListener('click', function () {
     
     this.style.visibility = 'hidden';
 
-    i[1].style.transform = 'translate(263%, 193%)';
+    i[1].style.transform = 'translate(307%, 136.5%)';
     i[1].style.visibility = 'visible';
-    i[3].style.transform = 'translate(314.5%, 14.8%)';
+    i[3].style.transform = 'translate(386%, 89%)';
     i[3].style.visibility = 'visible';
-    i[5].style.transform = 'translate(418%, -85.2%)';
+    i[5].style.transform = 'translate(386%, 94%)';
     i[5].style.visibility = 'visible';
-    i[7].style.transform = 'translate(470.8%, -107%)';
+    i[7].style.transform = 'translate(307%, 47%)';
     i[7].style.visibility = 'visible';
-    i[9].style.transform = 'translate(418.5%, -128.5%)';
+    i[9].style.transform = 'translate(228%, -106%)';
     i[9].style.visibility = 'visible';
-    i[11].style.transform = 'translate(315%, -228.5%)';
+    i[11].style.transform = 'translate(228%, -311%)';
     i[11].style.visibility = 'visible';
     
-    i[13].style.transform = 'translate(159.8%, -406.5%)';
+    i[13].style.transform = 'translate(307%, -569%)';
     i[13].style.visibility = 'visible';
-    i[15].style.transform = 'translate(211%, -585%)';
+    i[15].style.transform = 'translate(386%, -616%)';
     i[15].style.visibility = 'visible';
-    i[17].style.transform = 'translate(262.5%, -763.5%)';
+    i[17].style.transform = 'translate(465%, -663.5%)';
     i[17].style.visibility = 'visible';
-    i[19].style.transform = 'translate(365.8%, -863.5%)';
+    i[19].style.transform = 'translate(465%, -658.5%)';
     i[19].style.visibility = 'visible';
-    i[21].style.transform = 'translate(469.5%, -963.5%)';
+    i[21].style.transform = 'translate(465%, -653%)';
     i[21].style.visibility = 'visible';
-    i[23].style.transform = 'translate(522%, -985.5%)';
+    i[23].style.transform = 'translate(386%, -701%)';
     i[23].style.visibility = 'visible';
-    i[25].style.transform = 'translate(574.8%, -1007%)';
+    i[25].style.transform = 'translate(307%, -748%)';
     i[25].style.visibility = 'visible';
-    i[27].style.transform = 'translate(522.2%, -1028.5%)';
+    i[27].style.transform = 'translate(228%, -900%)';
     i[27].style.visibility = 'visible';
-    i[29].style.transform = 'translate(470.5%, -1050.0%)';
+    i[29].style.transform = 'translate(149%, -1053%)';
     i[29].style.visibility = 'visible';
-    i[31].style.transform = 'translate(366.8%, -1149.8%)';
+    i[31].style.transform = 'translate(149%, -1258%)';
     i[31].style.visibility = 'visible';
-    i[33].style.transform = 'translate(263%, -1249.8%)';
+    i[33].style.transform = 'translate(149%, -1463%)';
     i[33].style.visibility = 'visible';
-    i[35].style.transform = 'translate(212%, -1428.5%)';
+    i[35].style.transform = 'translate(228%, -1616%)';
     i[35].style.visibility = 'visible';
 
-    
-    document.getElementById('count-timer').style.visibility = 'visible';
+    document.getElementById('j-webb').style.animation = 'scaleTitle 1.5s forwards';
 });
 
-const launch = '31 Oct 2021';
-const daysEle = document.getElementById('days');
-const hoursEle = document.getElementById('hours');
-const minsEle = document.getElementById('mins');
-const secsEle = document.getElementById('secs');
+const launch = '1 November 2021';
 const boxDays = document.getElementById('box-days')
 const boxHours = document.getElementById('box-hours')
 const boxMins = document.getElementById('box-mins')
@@ -93,10 +88,6 @@ function countdown() {
     const mins = Math.floor(secsTotal / 60) % 60;
     const secs = Math.floor(secsTotal % 60);
 
-    daysEle.innerHTML = formatTime(days);
-    hoursEle.innerHTML = formatTime(hours);
-    minsEle.innerHTML = formatTime(mins);
-    secsEle.innerHTML = formatTime(secs);
     boxDays.innerHTML = formatTime(days);
     boxHours.innerHTML = formatTime(hours);
     boxMins.innerHTML = formatTime(mins);
@@ -109,12 +100,19 @@ function formatTime(time) {
 setInterval(countdown, 1000);
 
 const cellCount = document.getElementById('count-cell');
+const cellOrbit = document.getElementById('orbit-animation');
+const countdownBox = document.getElementById('countdown');
+const hegaxonBox = document.getElementById('hexagon-box');
 
 cellCount.addEventListener('mouseover', function() {
-    document.getElementById('countdown').style.visibility = 'visible';
+    countdownBox.style.animation = 'scaleLaunch 1s forwards';
 });
 
 cellCount.addEventListener('mouseout', function() {
-    document.getElementById('countdown').style.visibility = 'hidden';
+    countdownBox.style.animation = 'none';
 });
+
+// cellOrbit.addEventListener('mouseover', function() {
+    
+// });
 
