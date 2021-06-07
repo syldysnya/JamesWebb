@@ -149,6 +149,10 @@ body {
 
 #countdown {
     visibility: hidden;
+    position: relative;
+    left: 95vh;
+    top: -15vh;
+    z-index: -2;
 
     #bg-img {
         position: absolute;
@@ -278,7 +282,7 @@ body {
     font-size: 1.5vh;
     color: $color;
     transition: 1s ease-in;
-    transition-delay: 5s;
+    transition-delay: 1s;
     opacity: 0;
 
     &.active {
@@ -296,7 +300,7 @@ body {
     font-size: 1.5vh;
     color: $color;
     transition: 1s ease-in;
-    transition-delay: 5s;
+    transition-delay: 1s;
     opacity: 0;
 
     &.active {
@@ -314,7 +318,7 @@ body {
     width: 15vh;
     text-align: center;
     transition: 1s ease-in;
-    transition-delay: 5s;
+    transition-delay: 1s;
     opacity: 0;
 
     &.active {
@@ -332,7 +336,7 @@ body {
     left: 2vh;
     color: $color;
     transition: 1s ease-in;
-    transition-delay: 5s;
+    transition-delay: 1s;
     opacity: 0;
 
     &.active {
@@ -417,13 +421,6 @@ body {
     0% {
         visibility: hidden;
     }
-    6% {
-        visibility: visible;
-        transform: scale(0.1);
-        position: relative;
-        left: 40vh;
-        top: 13vh;
-    }
 
     100% {
         visibility: visible;
@@ -439,4 +436,14 @@ body {
     top: -60vh;
     width: 0;
     height: 0;
+}
+
+.x-button {
+    visibility: hidden;
+    position: absolute;
+    left: 102vh;
+    font-size: 5vh;
+    color: $color;
+    top: 0;
+    cursor: pointer;
 }

@@ -113,6 +113,9 @@ const shortLineText = document.getElementById('text-short-line');
 const longLineText = document.getElementById('text-long-line');
 const l2Point = document.getElementById('l2-point');
 const hubbleText = document.getElementById('hubble-line');
+const orbitInfoTitle = document.getElementById('orbit-info-title');
+const orbitInfoText = document.getElementById('orbit-info-text');
+const xButton = document.getElementById('x-button');
 
 cellCount.addEventListener('mouseover', function() {
     countdownBox.style.animation = 'scaleLaunch 1s forwards';
@@ -124,8 +127,8 @@ cellCount.addEventListener('mouseout', function() {
 
 cellOrbit.addEventListener('mouseover', function() {
     orbitBox.style.visibility = 'visible';
-    document.getElementById('orbit-info-title').classList.add('active');
-    document.getElementById('orbit-info-text').classList.add('active');
+    orbitInfoTitle.classList.add('active');
+    orbitInfoText.classList.add('active');
     hegaxonBox.style.animation = 'orbitAnimation2 10s forwards';
     earthPng.style.animation = 'orbitAnimation1 10s forwards';
     moonPng.style.animation = 'orbitAnimation3 10s forwards';
@@ -140,5 +143,27 @@ cellOrbit.addEventListener('mouseover', function() {
     l2Point.classList.add('active');
     hubbleText.style.visibility = 'visible';
     hubbleText.classList.add('active');
+    xButton.style.visibility = 'visible';
+});
+
+xButton.addEventListener('click', function() {
+    orbitBox.style.visibility = 'hidden';
+    orbitInfoTitle.classList.remove('active');
+    orbitInfoText.classList.remove('active');
+    hegaxonBox.style.animation = 'none';
+    earthPng.style.animation = 'none';
+    moonPng.style.animation = 'none';
+    hubblePng.style.animation = 'none';
+    longLine.style.animation = 'none';
+    shortLine.style.animation = 'none';
+    shortLineText.style.visibility = 'hidden';
+    shortLineText.classList.remove('active');
+    longLineText.style.visibility = 'hidden';
+    longLineText.classList.remove('active');
+    l2Point.style.visibility = 'hidden';
+    l2Point.classList.remove('active');
+    hubbleText.style.visibility = 'hidden';
+    hubbleText.classList.remove('active');
+    xButton.style.visibility = 'hidden';
 });
 
