@@ -103,6 +103,16 @@ const cellCount = document.getElementById('count-cell');
 const cellOrbit = document.getElementById('orbit-animation');
 const countdownBox = document.getElementById('countdown');
 const hegaxonBox = document.getElementById('hexagon-box');
+const earthPng = document.getElementById('img-earth');
+const moonPng = document.getElementById('img-moon');
+const hubblePng = document.getElementById('img-hubble');
+const orbitBox = document.getElementById('orbit');
+const longLine = document.getElementById('long-line');
+const shortLine = document.getElementById('short-line');
+const shortLineText = document.getElementById('text-short-line');
+const longLineText = document.getElementById('text-long-line');
+const l2Point = document.getElementById('l2-point');
+const hubbleText = document.getElementById('hubble-line');
 
 cellCount.addEventListener('mouseover', function() {
     countdownBox.style.animation = 'scaleLaunch 1s forwards';
@@ -112,7 +122,23 @@ cellCount.addEventListener('mouseout', function() {
     countdownBox.style.animation = 'none';
 });
 
-// cellOrbit.addEventListener('mouseover', function() {
-    
-// });
+cellOrbit.addEventListener('mouseover', function() {
+    orbitBox.style.visibility = 'visible';
+    document.getElementById('orbit-info-title').classList.add('active');
+    document.getElementById('orbit-info-text').classList.add('active');
+    hegaxonBox.style.animation = 'orbitAnimation2 10s forwards';
+    earthPng.style.animation = 'orbitAnimation1 10s forwards';
+    moonPng.style.animation = 'orbitAnimation3 10s forwards';
+    hubblePng.style.animation = 'orbitAnimation4 10s forwards';
+    longLine.style.animation = 'longLineAnimation 10s forwards';
+    shortLine.style.animation = 'shortLineAnimation 10s forwards';
+    shortLineText.style.visibility = 'visible';
+    shortLineText.classList.add('active');
+    longLineText.style.visibility = 'visible';
+    longLineText.classList.add('active');
+    l2Point.style.visibility = 'visible';
+    l2Point.classList.add('active');
+    hubbleText.style.visibility = 'visible';
+    hubbleText.classList.add('active');
+});
 

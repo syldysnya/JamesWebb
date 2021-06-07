@@ -42,30 +42,63 @@
             <div class="cell"></div>
             <div class="cell"></div>
         </div>
-        <div class="countdown" id="countdown">
-            <div id="bg-img"></div>
-            <div class="title">Until launch:</div>
-            <div id="count-timer-max">
-                <div class="count-box">
-                    <div class="timer" id="box-days"></div>
-                    <small>days</small>
-                </div>
-                <div class="count-box">
-                    <div class="timer" id="box-hours"></div> 
-                    <small>hours</small>
-                </div>
-                <div class="count-box">
-                    <div class="timer" id="box-mins"></div>
-                    <small>mins</small>
-                </div>
-                <div class="count-box">
-                    <div class="timer" id="box-secs"></div>
-                    <small>secs</small>
+        <div class="empty-div">
+            <div class="countdown" id="countdown">
+                <div id="bg-img"></div>
+                <div class="title">Until launch:</div>
+                <div id="count-timer-max">
+                    <div class="count-box">
+                        <div class="timer" id="box-days"></div>
+                        <small>days</small>
+                    </div>
+                    <div class="count-box">
+                        <div class="timer" id="box-hours"></div> 
+                        <small>hours</small>
+                    </div>
+                    <div class="count-box">
+                        <div class="timer" id="box-mins"></div>
+                        <small>mins</small>
+                    </div>
+                    <div class="count-box">
+                        <div class="timer" id="box-secs"></div>
+                        <small>secs</small>
+                    </div>
                 </div>
             </div>
         </div>
-        
     </div>
+    <div class="orbit" id="orbit">
+        <div class="orbit-info-title" id="orbit-info-title">
+            James Webb’s Halo Orbit
+        </div>
+        <div class="orbit-info-text" id="orbit-info-text">
+            The James Webb Space Telescope will not orbit the Earth like Hubble but will in fact orbit the Sun.
+            It will travel for approximately 30 days before reaching what is known as the second Lagrange point, or L2.
+            The orbit around this specific point in space will ensure that the telescope remains in the same relative
+            position to the sun and the earth, so that the telescope remains unaffected by the heat and light.
+        </div>
+        <img src="./dist/images/Earth_Western_Hemisphere_transparent_background.png" id="img-earth">
+        <img src="./dist/images/580b585b2edbce24c47b2923 (1).png" id="img-hubble">
+        <img src="./dist/images/moon-png-no-background-15.png" id="img-moon">
+        <div class="short-line" id="short-line"></div>
+        <div class="text-short-line" id="text-short-line">239,000 miles (384,000 km)</div>
+        <div class="long-line" id="long-line"></div>
+        <div class="text-long-line" id="text-long-line">930,000 miles (1.5 million km)</div>
+        <div class="l2-point" id="l2-point">
+            L2 (Lagrange Point)
+        </br>
+            James Webb Space Telescope's orbit
+        </div>
+        <div class="hubble-line" id="hubble-line">
+            The Hubble Space Telescope is in low-Earth orbit
+        </br>
+            354 miles away (570 km)
+        </div>
+        <div class="x-button" id="x-button">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+    <!-- <img src="./dist/images/464173main_L2_Webb_rework.jpg" class="img-travel"> -->
     <script src="./dist/main.js"></script>
 </body>
 </html>
