@@ -11,14 +11,10 @@ Main page will have a countdown to the launch of the James Webb Space Telescope
 ### Information about the telescope
 User will be able to find an information about the James Webb telescope when their mouse will be on a picture
 
-### Data visualization
-User will be able to see datas about the telescope. For example, how much money was spent and compare to other to understand the difference.
-
 ### About
 User will see a short information about this project and links to a developer pages.
 
 ## Architecture and Technology
-- D3 for visualization
 - HTML, CSS, and JavaScript
 - DOM manipulation
 
@@ -28,6 +24,5 @@ User will see a short information about this project and links to a developer pa
 ## Implementation Timeline
 - Setting up environment for a project, reading documentations (1 day)
 - A countdown info panel (0.5 day)
-- D3 data visualization (2 days)
-- CSS (0.5 day)
+- CSS (2.5 day)
 - JavScript (1 day)
