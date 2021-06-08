@@ -116,6 +116,8 @@ const hubbleText = document.getElementById('hubble-line');
 const orbitInfoTitle = document.getElementById('orbit-info-title');
 const orbitInfoText = document.getElementById('orbit-info-text');
 const xButton = document.getElementById('x-button');
+const arianeCell = document.getElementById('ariane-cell');
+const xButtonAriane = document.getElementById('x-button-ariane');
 
 cellCount.addEventListener('mouseover', function() {
     countdownBox.style.animation = 'scaleLaunch 1s forwards';
@@ -167,3 +169,12 @@ xButton.addEventListener('click', function() {
     xButton.style.visibility = 'hidden';
 });
 
+arianeCell.addEventListener('mouseover', function() {
+    document.getElementById('ariane-fact').classList.add('active');
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 10s forwards';
+});
+
+xButtonAriane.addEventListener('click', function() {
+    document.getElementById('ariane-fact').classList.remove('active');
+    hegaxonBox.style.animation = 'none';
+});
