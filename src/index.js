@@ -118,6 +118,8 @@ const orbitInfoText = document.getElementById('orbit-info-text');
 const xButton = document.getElementById('x-button');
 const arianeCell = document.getElementById('ariane-cell');
 const xButtonAriane = document.getElementById('x-button-ariane');
+const nameHistory = document.getElementById('name-cell-box');
+const nameCell = document.getElementById('name-text');
 
 cellCount.addEventListener('mouseover', function() {
     countdownBox.style.animation = 'scaleLaunch 1s forwards';
@@ -171,10 +173,15 @@ xButton.addEventListener('click', function() {
 
 arianeCell.addEventListener('mouseover', function() {
     document.getElementById('ariane-fact').classList.add('active');
-    hegaxonBox.style.animation = 'hexagonBoxMiddle 10s forwards';
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards';
 });
 
 xButtonAriane.addEventListener('click', function() {
     document.getElementById('ariane-fact').classList.remove('active');
     hegaxonBox.style.animation = 'none';
 });
+
+nameCell.addEventListener('mouseover', function() {
+    nameHistory.classList.add('active');
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards';
+})
