@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Sofia&display=swap');
+
 $color: #ccaa00;
 $font: 'Fjalla One', sans-serif;
 $count-color: rgba(204, 170, 0, 0.2);
 $back-box-color: #1a2336c7;
 $back-color: rgba(65, 63, 192, 0.5);
+$italic-font: 'Sofia';
+$blue-color: #32b2e0;
+$warm-gold: #e6a53f;
 
 body {
     background-image: url('../images/background-space.jpg');
@@ -15,6 +20,8 @@ body {
     width: 100vh;
     height: 100vh;
     margin: auto;
+    transform: translate3d(0px, 0px, 0px);
+    transition: transform .5s ease-in-out;
 }
 
 .cell, .cell-toggle {
@@ -31,6 +38,11 @@ body {
     visibility: hidden;
     z-index: 1;
     transition: 1s;
+    opacity: .5;
+
+    &:hover {
+        opacity: 1;   
+    }
 }
 
 .cell-toggle {
@@ -78,10 +90,10 @@ body {
     top: 43vh;
     
     @keyframes scaleTitle {
-        0% {
-            visibility: visible;
-            font-size: 100vh;
-            opacity: .6;
+        40% {
+            visibility: hidden;
+            font-size: 3.5vh;
+            opacity: 0;
         }
         100% {
             visibility: visible;
@@ -206,6 +218,8 @@ body {
     color: rgba(255, 255, 255, 0.8);
     font-family: $font;
     font-size: 3vh;
+    transform: translate3d(0px, 0px, 0px);
+    transition: transform .5s ease-in-out;
 
     #img-earth {
         width: 20vh;
@@ -246,8 +260,8 @@ body {
 .orbit-info-text {
     text-align: center;
     opacity: 0;
-    transition: 1s ease-in;
     padding: 3vh;
+    transition: 1s ease-in;
 
     &.active {
         opacity: 1;
@@ -420,7 +434,11 @@ body {
 
 @keyframes orbitAnimation2 {
     0% {
-        visibility: hidden;
+        visibility: visible;
+        transform: scale(1);
+        position: relative;
+        left: 0vh;
+        top: 0;
     }
 
     100% {
@@ -458,35 +476,52 @@ body {
     color: $color;
     top: 0;
     cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
 }
 
 #about-cell, #mirror-cell, #mission-cell, #duration-cell, #name-cell,
-#instruments-cell, #ariane-cell, #budget-cell, #orbit-animation, #count-cell {
+#instruments-cell, #ariane-cell, #budget-cell, #orbit-animation, #count-cell, #dev-cell, #hubble-cell {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
 }
 
 .about-text, .mirror-text, .mission-text, .duration-text, .name-text,
-.instruments-text, .ariane-text, .budget-text, .orbit-text, .count-text {
+.instruments-text, .ariane-text, .budget-text, .orbit-text, .count-text, .dev-text, .hubble-text {
     font-family: $font;
     font-size: 2vh;
+    cursor: pointer;
+}
+
+.about-fact, .mirror-fact, .mission-fact, .duration-fact, .name-cell-box,
+.instruments-fact, .ariane-fact, .budget-fact, .count-fact, .dev-fact, .hubble-fact {
+    position: absolute;
+    top: 3vh;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 80vh;
+    border-radius: 0.5vh;
+    z-index: 2;
+    display: block;
+    margin: 0 auto;
 }
 
 .ariane-fact {
-    visibility: hidden;
-    position: relative;
     background: $color;
     color: white;
     font-family: $font;
-    top: -165vh;
-    left: 10vh;
     height: 70vh;
-    z-index: 2;
-    width: 80vh;
+    top: 13vh;
     transition: 1s ease-in;
     opacity: 0;
-    border-radius: .5vh;
 
     .ariane-fact-text {
         font-family: Tahoma, Verdana, sans-serif;
@@ -531,22 +566,20 @@ body {
     color: $color;
     font-size: 5vh;
     cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
 }
 
 .name-cell-box {
-    visibility: hidden;
-    position: relative;
     background: $color;
     color: white;
     font-family: $font;
-    top: -240vh;
-    left: 10vh;
     height: 63vh;
-    z-index: 2;
-    width: 80vh;
     transition: 1s ease-in;
     opacity: 0;
-    border-radius: .5vh;
 
     .jw-pic {
         width: 25vh;
@@ -585,4 +618,231 @@ body {
     font-style: italic;
     width: 100%;
     font-size: 2vh;
+}
+
+.x-button-webb {
+    position: absolute;
+    left: 83vh;
+    top: -1vh;
+    color: $color;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
+.mirror-fact {
+    background: #ccaa00;
+    color: white;
+    font-family: "Fjalla One", sans-serif;
+    transition: 1s ease-in;
+    opacity: 0;
+
+    .mirror-pic {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.mirror-title {
+    font-size: 7vh;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+.mirror-fact-text {
+    font-family: Tahoma, Verdana, sans-serif;
+    padding: 4vh;
+    width: 90%;
+    font-size: 2.3vh;
+}
+
+.x-button-mirror {
+    position: absolute;
+    left: 83vh;
+    top: -1vh;
+    color: $color;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
+.duration-fact {
+    background: $warm-gold;
+    color: white;
+    font-family: "Fjalla One", sans-serif;
+    transition: 1s ease-in;
+    opacity: 0;
+
+    .duration-pic {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.duration-title {
+    font-size: 7vh;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+.duration-fact-text {
+    font-family: Tahoma, Verdana, sans-serif;
+    padding: 4vh;
+    width: 90%;
+    font-size: 2.3vh;
+}
+
+.x-button-duration {
+    position: absolute;
+    left: 83vh;
+    top: -1vh;
+    color: $warm-gold;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
+.mission-fact {
+    background: $color;
+    color: white;
+    font-family: "Fjalla One", sans-serif;
+    opacity: 0;
+    transition: 1s ease-in;
+
+    .mission-navbar {
+        display: flex;
+        justify-content: space-around;
+        font-size: 2.3vh;
+        height: 4.5vh;
+        font-family: $italic-font;
+        padding: 2vh;
+        padding-bottom: 0;
+        color: $color;
+        transition: all 2s ease-in;
+        transform: translate3d(0px, 0px, 0px);
+        background-color: white;
+
+        div {
+            font-size: 2vh;
+            padding: .5vh;
+            cursor: pointer;
+
+            &:hover {
+                border-bottom: .5vh solid $color;
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    
+    .text-bar {
+        padding: 0 3.9vh;
+        background-color: white;
+        color: $color;
+        position: relative;
+        height: 15vh;
+        
+        .early-days-text, .galaxies-text, .other-worlds-text, .star-lifecycle-text {
+            visibility: hidden;
+            font-family: Tahoma, Verdana, sans-serif;
+            font-size: 2vh;
+            margin-right: 3.9vh;
+            height: 13vh;
+            position: absolute;
+            background-color: white;
+            color: black;
+    
+            div {
+                padding: 2vh;
+            }
+        }
+
+        .early-days-text.visible, .galaxies-text.visible, .other-worlds-text.visible, .star-lifecycle-text.visible {
+            visibility: visible;
+        }
+    }
+
+    .mission-pic {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+
+        img {
+            height: 100%;
+        }
+    }
+
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.mission-title {
+    font-size: 7vh;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+.mission-fact-text {
+    font-family: Tahoma, Verdana, sans-serif;
+    padding: 4vh;
+    width: 90%;
+    font-size: 2.3vh;
+}
+
+.x-button-mission {
+    position: absolute;
+    left: 83vh;
+    top: -1vh;
+    color: $color;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
 }

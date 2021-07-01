@@ -118,10 +118,28 @@ const orbitInfoText = document.getElementById('orbit-info-text');
 const xButton = document.getElementById('x-button');
 const arianeCell = document.getElementById('ariane-cell');
 const xButtonAriane = document.getElementById('x-button-ariane');
+const xButtonWebb = document.getElementById('x-button-webb');
+const xButtonMirror = document.getElementById('x-button-mirror');
+const xButtonMission = document.getElementById('x-button-mission');
+const xButtonDuration = document.getElementById('x-button-duration');
 const nameHistory = document.getElementById('name-cell-box');
 const nameCell = document.getElementById('name-text');
+const mirrorCell = document.getElementById('mirror-cell');
+const mirrorFact = document.getElementById('mirror-fact');
+const missionCell = document.getElementById('mission-cell');
+const missionFact = document.getElementById('mission-fact');
+const earlyDays = document.getElementById('early-days');
+const galaxies = document.getElementById('galaxies');
+const starLifecycle = document.getElementById('star-lifecycle');
+const otherWorlds = document.getElementById('other-worlds');
+const earlyDaysText = document.getElementById('early-days-text');
+const galaxiesText = document.getElementById('galaxies-text');
+const starLifecycleText = document.getElementById('star-lifecycle-text');
+const otherWorldsText = document.getElementById('other-worlds-text');
+const missionDuration = document.getElementById('duration-cell');
+const missionDurationFact = document.getElementById('duration-fact');
 
-cellCount.addEventListener('mouseover', function() {
+cellCount.addEventListener('click', function() {
     countdownBox.style.animation = 'scaleLaunch 1s forwards';
 });
 
@@ -129,11 +147,11 @@ cellCount.addEventListener('mouseout', function() {
     countdownBox.style.animation = 'none';
 });
 
-cellOrbit.addEventListener('mouseover', function() {
+cellOrbit.addEventListener('click', function() {
     orbitBox.style.visibility = 'visible';
     orbitInfoTitle.classList.add('active');
     orbitInfoText.classList.add('active');
-    hegaxonBox.style.animation = 'orbitAnimation2 10s forwards';
+    hegaxonBox.style.animation = 'orbitAnimation2 5s forwards';
     earthPng.style.animation = 'orbitAnimation1 10s forwards';
     moonPng.style.animation = 'orbitAnimation3 10s forwards';
     hubblePng.style.animation = 'orbitAnimation4 10s forwards';
@@ -152,7 +170,10 @@ cellOrbit.addEventListener('mouseover', function() {
 
 xButton.addEventListener('click', function() {
     orbitBox.style.visibility = 'hidden';
+    orbitBox.style.transition = 'none';
+    orbitInfoTitle.style.transition = 'none';;
     orbitInfoTitle.classList.remove('active');
+    orbitInfoText.style.transition = 'none';;
     orbitInfoText.classList.remove('active');
     hegaxonBox.style.animation = 'none';
     earthPng.style.animation = 'none';
@@ -161,17 +182,21 @@ xButton.addEventListener('click', function() {
     longLine.style.animation = 'none';
     shortLine.style.animation = 'none';
     shortLineText.style.visibility = 'hidden';
+    shortLineText.style.transition = 'none';
     shortLineText.classList.remove('active');
     longLineText.style.visibility = 'hidden';
+    longLineText.style.transition = 'none';
     longLineText.classList.remove('active');
     l2Point.style.visibility = 'hidden';
+    l2Point.style.transition = 'none';
     l2Point.classList.remove('active');
     hubbleText.style.visibility = 'hidden';
+    hubbleText.style.transition = 'none';
     hubbleText.classList.remove('active');
     xButton.style.visibility = 'hidden';
 });
 
-arianeCell.addEventListener('mouseover', function() {
+arianeCell.addEventListener('click', function() {
     document.getElementById('ariane-fact').classList.add('active');
     hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards';
 });
@@ -181,7 +206,67 @@ xButtonAriane.addEventListener('click', function() {
     hegaxonBox.style.animation = 'none';
 });
 
-nameCell.addEventListener('mouseover', function() {
+xButtonWebb.addEventListener('click', function() {
+    nameHistory.classList.remove('active');
+    hegaxonBox.style.animation = 'none';
+});
+
+nameCell.addEventListener('click', function() {
     nameHistory.classList.add('active');
     hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards';
-})
+});
+
+mirrorCell.addEventListener('click', function() {
+    mirrorFact.classList.add('active');
+});
+
+xButtonMirror.addEventListener('click', function() {
+    mirrorFact.classList.remove('active');
+    hegaxonBox.style.animation = 'none';
+});
+
+missionDuration.addEventListener('click', function() {
+    missionDurationFact.classList.add('active');
+});
+
+xButtonDuration.addEventListener('click', function() {
+    missionDurationFact.classList.remove('active');
+});
+
+missionCell.addEventListener('click', function() {
+    missionFact.classList.add('active');
+});
+
+function resetVisible() {
+    earlyDaysText.classList.remove('visible');
+    galaxiesText.classList.remove('visible');
+    starLifecycleText.classList.remove('visible');
+    otherWorldsText.classList.remove('visible');
+}
+
+earlyDays.addEventListener('mouseover', function() {
+    resetVisible();
+    earlyDaysText.classList.add('visible');
+});
+
+galaxies.addEventListener('mouseover', function() {
+    resetVisible();
+    galaxiesText.classList.add('visible');
+});
+
+otherWorlds.addEventListener('mouseover', function() {
+    resetVisible();
+    otherWorldsText.classList.add('visible');
+    
+});
+
+starLifecycle.addEventListener('mouseover', function() {
+    resetVisible();
+    starLifecycleText.classList.add('visible');
+    
+});
+
+xButtonMission.addEventListener('click', function() {
+    missionFact.classList.remove('active');
+    hegaxonBox.style.animation = 'none';
+});
