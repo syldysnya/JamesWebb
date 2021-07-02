@@ -500,11 +500,11 @@ body {
 }
 
 .about-fact, .mirror-fact, .mission-fact, .duration-fact, .name-cell-box,
-.instruments-fact, .ariane-fact, .budget-fact, .count-fact, .dev-fact, .hubble-fact {
+.instruments-fact, .ariane-fact, .budget-fact, .count-fact, .about-dev-fact, .hubble-fact {
     position: absolute;
     top: 3vh;
     visibility: hidden;
-    position: absolute;
+    opacity: 0;
     left: 0;
     right: 0;
     width: 80vh;
@@ -521,7 +521,6 @@ body {
     height: 70vh;
     top: 13vh;
     transition: 1s ease-in;
-    opacity: 0;
 
     .ariane-fact-text {
         font-family: Tahoma, Verdana, sans-serif;
@@ -579,7 +578,6 @@ body {
     font-family: $font;
     height: 63vh;
     transition: 1s ease-in;
-    opacity: 0;
 
     .jw-pic {
         width: 25vh;
@@ -635,11 +633,10 @@ body {
 }
 
 .mirror-fact {
-    background: #ccaa00;
+    background: $color;
     color: white;
     font-family: "Fjalla One", sans-serif;
     transition: 1s ease-in;
-    opacity: 0;
 
     .mirror-pic {
         width: 100%;
@@ -659,20 +656,39 @@ body {
     }
 }
 
-.mirror-title {
+.about-dev-fact {
+    background: #ccaa00;
+    color: white;
+    font-family: "Fjalla One", sans-serif;
+    transition: 1s ease-in;
+    opacity: 1;
+
+    .about-dev-pic {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.about-dev-title {
     font-size: 7vh;
     text-align: center;
     padding-top: 4vh;
 }
 
-.mirror-fact-text {
+.about-dev-fact-text {
     font-family: Tahoma, Verdana, sans-serif;
     padding: 4vh;
     width: 90%;
     font-size: 2.3vh;
 }
 
-.x-button-mirror {
+.x-button-about-dev {
     position: absolute;
     left: 83vh;
     top: -1vh;
@@ -834,6 +850,202 @@ body {
 }
 
 .x-button-mission {
+    position: absolute;
+    left: 83vh;
+    top: -1vh;
+    color: $color;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes factAnimation {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.hubble-fact {
+    background: #ccaa00;
+    color: white;
+    font-family: "Fjalla One", sans-serif;
+    transition: 1s ease-in;
+    opacity: 1;
+
+    .hubble-pic {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.hubble-title {
+    font-size: 7vh;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+.hubble-fact-text {
+    font-family: Tahoma, Verdana, sans-serif;
+    padding: 4vh;
+    width: 90%;
+    font-size: 2.3vh;
+}
+
+.x-button-hubble {
+    position: absolute;
+    left: 83vh;
+    top: -1vh;
+    color: $color;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
+.about-fact {
+    background: #ccaa00;
+    color: white;
+    font-family: "Fjalla One", sans-serif;
+    transition: 1s ease-in;
+    opacity: 1;
+
+    .about-pic {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.about-title {
+    font-size: 7vh;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+.about-fact-text {
+    font-family: Tahoma, Verdana, sans-serif;
+    padding: 4vh;
+    width: 90%;
+    font-size: 2.3vh;
+}
+
+.x-button-about {
+    position: absolute;
+    left: 83vh;
+    top: -1vh;
+    color: $color;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
+.instruments-fact {
+    background: #ccaa00;
+    color: white;
+    font-family: "Fjalla One", sans-serif;
+    transition: 1s ease-in;
+    opacity: 1;
+
+    .instruments-pic {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.instruments-title {
+    font-size: 7vh;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+.instruments-fact-text {
+    font-family: Tahoma, Verdana, sans-serif;
+    padding: 4vh;
+    width: 90%;
+    font-size: 2.3vh;
+}
+
+.x-button-instruments {
+    position: absolute;
+    left: 83vh;
+    top: -1vh;
+    color: $color;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
+.budget-fact {
+    background: #ccaa00;
+    color: white;
+    font-family: "Fjalla One", sans-serif;
+    transition: 1s ease-in;
+    opacity: 1;
+
+    .budget-pic {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.budget-title {
+    font-size: 7vh;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+.budget-fact-text {
+    font-family: Tahoma, Verdana, sans-serif;
+    padding: 4vh;
+    width: 90%;
+    font-size: 2.3vh;
+}
+
+.x-button-budget {
     position: absolute;
     left: 83vh;
     top: -1vh;

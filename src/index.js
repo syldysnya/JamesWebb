@@ -115,13 +115,19 @@ const l2Point = document.getElementById('l2-point');
 const hubbleText = document.getElementById('hubble-line');
 const orbitInfoTitle = document.getElementById('orbit-info-title');
 const orbitInfoText = document.getElementById('orbit-info-text');
-const xButton = document.getElementById('x-button');
 const arianeCell = document.getElementById('ariane-cell');
+const xButton = document.getElementById('x-button');
 const xButtonAriane = document.getElementById('x-button-ariane');
 const xButtonWebb = document.getElementById('x-button-webb');
 const xButtonMirror = document.getElementById('x-button-mirror');
 const xButtonMission = document.getElementById('x-button-mission');
 const xButtonDuration = document.getElementById('x-button-duration');
+const xButtonHubble = document.getElementById('x-button-hubble');
+const xButtonAboutDev = document.getElementById('x-button-about-dev');
+const xButtonAbout = document.getElementById('x-button-about');
+const xButtonBudget = document.getElementById('x-button-budget');
+const xButtonInstruments = document.getElementById('x-button-instruments');
+const xButtonCountdown = document.getElementById('x-button-countdown');
 const nameHistory = document.getElementById('name-cell-box');
 const nameCell = document.getElementById('name-text');
 const mirrorCell = document.getElementById('mirror-cell');
@@ -138,6 +144,24 @@ const starLifecycleText = document.getElementById('star-lifecycle-text');
 const otherWorldsText = document.getElementById('other-worlds-text');
 const missionDuration = document.getElementById('duration-cell');
 const missionDurationFact = document.getElementById('duration-fact');
+const aboutDevFact = document.getElementById('about-dev-fact');
+const devCell = document.getElementById('dev-cell');
+const aboutFact = document.getElementById('about-fact');
+const aboutCell = document.getElementById('about-cell');
+const budgetFact = document.getElementById('budget-fact');
+const budgetCell = document.getElementById('budget-cell');
+const instrumentsFact = document.getElementById('instruments-fact');
+const instrumentsCell = document.getElementById('instruments-cell');
+const camera = document.getElementById('camera');
+const spectr = document.getElementById('spectr');
+const instrument = document.getElementById('instrument');
+const instrumentText = document.getElementById('instrument-text');
+const sensor = document.getElementById('sensor');
+const sensorText = document.getElementById('sensor-text');
+const spectrText = document.getElementById('spectr-text');
+const cameraText = document.getElementById('camera-text');
+const hubbleFact = document.getElementById('hubble-fact');
+const hubbleCell = document.getElementById('hubble-cell');
 
 cellCount.addEventListener('click', function() {
     countdownBox.style.animation = 'scaleLaunch 1s forwards';
@@ -269,4 +293,44 @@ starLifecycle.addEventListener('mouseover', function() {
 xButtonMission.addEventListener('click', function() {
     missionFact.classList.remove('active');
     hegaxonBox.style.animation = 'none';
+});
+
+hubbleCell.addEventListener('click', function() {
+    hubbleFact.style.animation = 'factAnimation 2s forwards';
+});
+
+xButtonHubble.addEventListener('click', function() {
+    hubbleFact.style.animation = 'none';
+});
+
+budgetCell.addEventListener('click', function() {
+    budgetFact.style.animation = 'factAnimation 2s forwards';
+});
+
+xButtonBudget.addEventListener('click', function() {
+    budgetFact.style.animation = 'none';
+});
+
+devCell.addEventListener('click', function() {
+    aboutDevFact.style.animation = 'factAnimation 2s forwards';
+});
+
+xButtonAboutDev.addEventListener('click', function() {
+    aboutDevFact.style.animation = 'none';
+});
+
+instrumentsCell.addEventListener('click', function() {
+    instrumentsFact.style.animation = 'factAnimation 2s forwards';
+});
+
+xButtonInstruments.addEventListener('click', function() {
+    instrumentsFact.style.animation = 'none';
+});
+
+aboutCell.addEventListener('click', function() {
+    aboutFact.style.animation = 'factAnimation 2s forwards';
+});
+
+xButtonAbout.addEventListener('click', function() {
+    aboutFact.style.animation = 'none';
 });
