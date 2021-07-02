@@ -9,7 +9,7 @@ This project is created to countdown until launch time and provide users with in
 Main page will have a countdown to the launch of the James Webb Space Telescope
 
 ### Information about the telescope
-User will be able to find an information about the James Webb telescope when their mouse will be on a picture
+User will be able to find an information about the James Webb telescope with a mouse click
 
 ### About
 User will see a short information about this project and links to a developer pages.
