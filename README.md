@@ -19,7 +19,7 @@ User will see a short information about this project and links to a developer pa
 - DOM manipulation
 
 ## Wireframes
-![Annotation 2021-06-01 121351](https://user-images.githubusercontent.com/78821780/120413149-c4eced80-c325-11eb-8640-cf15dc615b42.png)
+![Screenshot 2021-07-02 171835](https://user-images.githubusercontent.com/78821780/124329523-9008cc00-db59-11eb-95a9-41c5cac21deb.png)
 
 ## Implementation Timeline
 - Setting up environment for a project, reading documentations (1 day)
