@@ -96,8 +96,8 @@
                 </div>
             </div>
         </div>
-        <div class="empty-div">
-            <div class="countdown" id="countdown">
+        <div class="countdown" id="countdown">
+            <div class="count-part">
                 <div id="bg-img"></div>
                 <div class="title">Until launch:</div>
                 <div id="count-timer-max">
@@ -118,9 +118,17 @@
                         <small>secs</small>
                     </div>
                 </div>
-                <div class="x-button-budget" id="x-button-budget">
-                    <i class="fas fa-times"></i>
-                </div>
+            </div>
+            <div class="count-part-text">
+                Webb will be launched from Arianespace's ELA-3 launch
+                complex at European Spaceport located near Kourou,
+                French Guiana. It is beneficial for launch sites to be
+                located near the equator - the spin of the Earth can help
+                give an additional push. The surface of the Earth at
+                the equator is moving at 1670 km/hr.
+            </div>
+            <div class="x-button-countdown" id="x-button-countdown">
+                <i class="fas fa-times"></i>
             </div>
         </div>
     </div>
@@ -299,36 +307,37 @@
         </div>
     </div>
     <div class="about-dev-fact" id="about-dev-fact">
-        <div class="about-dev-pic">
-            
-        </div>
-        <div class="about-dev-title">
-            About a Dev
-        </div>
         <div class="about-dev-fact-text">
-            <div class="links">
-                <a href="https://www.linkedin.com/in/syldysvkhomushku/" target='_blank'><i class="fab fa-linkedin"></i></a>
-                <a href="https://angel.co/u/syldysnya" target='_blank'><i className="fab fa-angellist"></i></a>
-                <a href="#" target='_blank'><i class="fab fa-github"></i>Personal Site</a>
+            <div class="about-dev-title">
+                About Dev
             </div>
-            <div class="email" id="email">
-                <i class="far fa-envelope"></i>
-                <span>syldysnya@gmail.com</span>
-            </div>
-            <div class="personal-site">
-                <a href="#" target='_blank'><i class="fab fa-github"></i>Personal Site</a>
+            <div class="dev-links">
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/syldysvkhomushku/" target='_blank'><i class="fab fa-linkedin"></i></a>
+                    <a href="https://angel.co/u/syldysnya" target='_blank'><i class="fab fa-angellist"></i></a>
+                    <a href="https://github.com/syldysnya" target='_blank'><i class="fab fa-github"></i></a>
+                </div>
+                <div class="personal-site">
+                    <a href="#" target='_blank'>Portfolio Site</a>
+                </div>
+                <div class="email" id="email">
+                    <span>syldysnya@gmail.com</span>
+                </div>
             </div>
             <div class="project-box">
                 <h1>My projects:</h1>
-                <div class="projects">
-                    <div class="open-dnd-table">
-                        <a href="http://opendndtable.herokuapp.com/" target='_blank'>FLUX</a>
-                    </div>
-                    <div class="flux">
-                        <a href="https://state-of-flux.herokuapp.com/" target='_blank'>FLUX</a>
-                    </div>
+            </div>
+            <div class="projects">
+                <div class="open-dnd-table">
+                    <a href="http://opendndtable.herokuapp.com/" target='_blank'>OpenDnDTable</a>
+                </div>
+                <div class="flux">
+                    <a href="https://state-of-flux.herokuapp.com/" target='_blank'>FLUX</a>
                 </div>
             </div>
+        </div>
+        <div class="about-dev-pic">
+            <img src="./dist/images/pic.jpg">
         </div>
         <div class="x-button-about-dev" id="x-button-about-dev">
             <i class="fas fa-times"></i>
@@ -358,7 +367,7 @@
             <img src="./dist/images/about-gif.gif">
         </div>
         <div class="about-title">
-            JAMES WEBB SPACE TELESCOPE
+            James Webb Space Telescope
         </div>
         <div class="about-fact-text">
             The James Webb Space Telescope (sometimes called JWST or Webb) is an orbiting infrared observatory that will
@@ -384,54 +393,63 @@
             Today, the James Webb Space Telescope’s budget exceeds $10 billion,
             and the project has essentially eaten astronomy. Despite its bloated budget,
             NASA has failed to launch this replacement in the 20-plus years since President George H. W. Bush left office.
-            Receently news came out that the JWST will remain on Earth until at least 2022.
+            Recently news came out that the JWST will remain on Earth until at least 2022.
         </div>
         <div class="x-button-budget" id="x-button-budget">
             <i class="fas fa-times"></i>
         </div>
     </div>
     <div class="instruments-fact" id="instruments-fact">
-        <div class="instruments-pic">
-            <img src="./dist/images/instruments.gif">
-        </div>
-        <div class="instruments-title">
-            Webbs's Instruments
+        <div class="first-div-instruments">
+            <div class="instruments-pic">
+                <img src="./dist/images/instruments.gif">
+            </div>
+            <div class="instruments-title">
+                Webbs's Instruments
+            </div>
         </div>
         <div class="instruments-fact-text">
             The James Webb Space Telescope includes four scientific instruments:
         </div>
         <ul>
             <li id="camera" class="instruments">
-                the Near Infrared Camera (NIRCam)
+                the Near Infrared
+                </br>
+                Camera (NIRCam)
             </li>
             <li class="instruments" id="spectr">
-                the Near-Infrared Spectrograph (NIRSpec)
+                the Near-Infrared
+                </br>
+                Spectrograph (NIRSpec)
             </li>
             <li class="instruments" id="instrument">
-                the Mid-Infrared Instrument (MIRI)
+                the Mid-Infrared
+                </br>
+                Instrument (MIRI)
             </li>
             <li class="intruments" id="sensor">
-                and the Fine Guidance Sensor/Near InfraRed Imager and Slitless Spectrograph (FGS-NIRISS)
+                the Fine Guidance Sensor/
+                Near InfraRed Imager and Slitless Spectrograph (FGS-NIRISS)
             </li>
         </ul>
         <div class="instruments-list-text">
-            <div id="camera-text">
-                The Near Infrared Camera (NIRCam) is Webb's primary imager that will cover the infrared wavelength range 0.6 to 5 microns.
-                NIRCam will detect light from: the earliest stars and galaxies in the process of formation,
-                the population of stars in nearby galaxies, as well as young stars in the Milky Way and Kuiper Belt objects.
-                NIRCam is equipped with coronagraphs, instruments that allow astronomers to take pictures of very faint objects around a central bright object,
-                like stellar systems. NIRCam's coronagraphs work by blocking a brighter object's light,
-                making it possible to view the dimmer object nearby.
-                With the coronagraphs, astronomers hope to determine the characteristics of planets orbiting nearby stars.
+            <div id="camera-text" class='details-text visible'>
+                    The Near Infrared Camera (NIRCam) is Webb's primary imager that will cover the infrared wavelength range 0.6 to 5 microns.
+                    NIRCam will detect light from: the earliest stars and galaxies in the process of formation,
+                    the population of stars in nearby galaxies, as well as young stars in the Milky Way and Kuiper Belt objects.
+                    NIRCam is equipped with coronagraphs, instruments that allow astronomers to take pictures of very faint objects around a central bright object,
+                    like stellar systems. NIRCam's coronagraphs work by blocking a brighter object's light,
+                    making it possible to view the dimmer object nearby.
+                    With the coronagraphs, astronomers hope to determine the characteristics of planets orbiting nearby stars.
             </div>
-            <div id="spectr-text">
+            <div id="spectr-text" class='details-text'>
                 The Near InfraRed Spectrograph (NIRSpec) will operate over a wavelength range of 0.6 to 5 microns.
                 A spectrograph (also sometimes called a spectrometer) is used to disperse light from an object into a spectrum.
                 Analyzing the spectrum of an object can tell us about its physical properties, including temperature,
                 mass, and chemical composition. The atoms and molecules in the object actually imprint lines on its spectrum
                 that uniquely fingerprint each chemical element present and can reveal a wealth of information about physical conditions in the object.
             </div>
-            <div id="instrument-text">
+            <div id="instrument-text" class='details-text'>
                 The Mid-Infrared Instrument (MIRI) has both a camera and a spectrograph that sees light
                 in the mid-infrared region of the electromagnetic spectrum,
                 with wavelengths that are longer than our eyes see.
@@ -441,7 +459,7 @@
                 MIRI's camera will provide wide-field,
                 broadband imaging that will continue the breathtaking astrophotography that has made Hubble so universally admired.
             </div>
-            <div id="sensor-text">
+            <div id="sensor-text" class='details-text'>
                 The Fine Guidance Sensor (FGS) allows Webb to point precisely,
                 so that it can obtain high-quality images. The Near Infrared Imager
                 and Slitless Spectrograph part of the FGS/NIRISS will be used to

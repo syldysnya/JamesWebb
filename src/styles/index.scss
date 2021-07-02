@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coda&family=Lato:wght@300&family=Lobster&family=Sofia&display=swap');
 
 $color: #ccaa00;
 $font: 'Fjalla One', sans-serif;
 $count-color: rgba(204, 170, 0, 0.2);
-$back-box-color: #1a2336c7;
+$back-box-color: #1a2336;
 $back-color: rgba(65, 63, 192, 0.5);
 $italic-font: 'Sofia';
 $blue-color: #32b2e0;
 $warm-gold: #e6a53f;
+$fact-font: 'Coda', cursive;
+$title-font: 'Lobster', cursive;
 
 body {
     background-image: url('../images/background-space.jpg');
@@ -62,6 +66,46 @@ body {
     right: 0;
     bottom: 0;
     margin: auto;
+}
+
+#about-cell, #mirror-cell, #mission-cell, #duration-cell, #name-cell,
+#instruments-cell, #ariane-cell, #budget-cell, #orbit-animation, #count-cell, #dev-cell, #hubble-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.about-title, .mirror-title, .mission-title, .duration-title, .name-title,
+.instruments-title, .ariane-fact-title, .budget-title, .orbit-info-title, .count-title, .about-dev-title, .hubble-title {
+    font-family: $title-font;
+    font-size: 5vh;
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.about-text, .mirror-text, .mission-text, .duration-text, .name-text,
+.instruments-text, .ariane-text, .budget-text, .orbit-text, .count-text, .dev-text, .hubble-text {
+    font-family: $font;
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+.about-fact, .mirror-fact, .mission-fact, .duration-fact, .name-cell-box,
+.instruments-fact, .ariane-fact, .budget-fact, .count-fact, .about-dev-fact, .hubble-fact, .countdown {
+    position: absolute;
+    top: 3vh;
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    width: 80vh;
+    border-radius: 0.5vh;
+    z-index: 2;
+    display: block;
+    margin: 0 auto;
+    font-family: $fact-font;
 }
 
 .j-webb-box {
@@ -132,53 +176,50 @@ body {
 
 @keyframes scaleLaunch {
     0% {
-        width: 0;
-        height: 0;
         visibility: hidden;
     }
     100% {
         visibility: visible;
-        width: 30vh;
-        height: 18vh;
-        display: grid;
-        grid-template-rows: 6vh 10vh;
-        row-gap: 1vh;
-        text-align: center;
-        align-items: center;
-        z-index: 2;
-        color: white;
-        position: absolute;
-        margin: auto;
-        top: -20vh;
-        bottom: 0;
-        left: 80vh;
-        right: 0;
-        background-color: $back-box-color;
-        border-radius: 0.1vh;
-        border: 1px solid white;
-        font-family: $font;
+        opacity: 1;
     }
 }
 
 #countdown {
     visibility: hidden;
-    position: relative;
-    left: 95vh;
-    top: -15vh;
-    z-index: -2;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    margin: auto;
+    background-color: $back-box-color;
+    font-family: $fact-font;
+    top: 17.5vh;
+    width: 70vh;
+
+    .count-part {
+        height: 30vh;
+    }
+
+    .count-part-text {
+        font-family: $fact-font;
+        font-size: 2.5vh;
+        text-align: center;
+        padding: 4vh;
+    }
 
     #bg-img {
         position: absolute;
+        height: 30vh;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         z-index: -1;
         background: url('../images/launch-img.png');
-        background-size: 100% auto;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
         width: 100%;
-        height: auto;
-        opacity: .7;
+        opacity: 0.6;
     }
     
     .title {
@@ -192,15 +233,32 @@ body {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        font-size: 3vh;
+
+        small {
+            font-size: 3vh;
+        }
     }
     
     #count-timer-max {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        font-size: 4vh;
+        font-size: 6vh;
         padding: 2%;
+    }
+}
+
+.x-button-countdown {
+    position: absolute;
+    left: 73vh;
+    top: 0;
+    color: $color;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
     }
 }
 
@@ -461,13 +519,6 @@ body {
     }
 }
 
-.empty-div {
-    position: relative;
-    top: -60vh;
-    width: 0;
-    height: 0;
-}
-
 .x-button {
     visibility: hidden;
     position: absolute;
@@ -483,47 +534,15 @@ body {
     }
 }
 
-#about-cell, #mirror-cell, #mission-cell, #duration-cell, #name-cell,
-#instruments-cell, #ariane-cell, #budget-cell, #orbit-animation, #count-cell, #dev-cell, #hubble-cell {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-}
-
-.about-text, .mirror-text, .mission-text, .duration-text, .name-text,
-.instruments-text, .ariane-text, .budget-text, .orbit-text, .count-text, .dev-text, .hubble-text {
-    font-family: $font;
-    font-size: 2vh;
-    cursor: pointer;
-}
-
-.about-fact, .mirror-fact, .mission-fact, .duration-fact, .name-cell-box,
-.instruments-fact, .ariane-fact, .budget-fact, .count-fact, .about-dev-fact, .hubble-fact {
-    position: absolute;
-    top: 3vh;
-    visibility: hidden;
-    opacity: 0;
-    left: 0;
-    right: 0;
-    width: 80vh;
-    border-radius: 0.5vh;
-    z-index: 2;
-    display: block;
-    margin: 0 auto;
-}
-
 .ariane-fact {
     background: $color;
     color: white;
-    font-family: $font;
     height: 70vh;
     top: 13vh;
     transition: 1s ease-in;
 
     .ariane-fact-text {
-        font-family: Tahoma, Verdana, sans-serif;
+        
         padding: 4vh;
         width: 48vh;
         font-size: 2vh;
@@ -555,6 +574,7 @@ body {
 
     span {
         font-size: 4vh;
+        font-family: $font;
     }
 }
 
@@ -578,6 +598,7 @@ body {
     font-family: $font;
     height: 63vh;
     transition: 1s ease-in;
+    top: 15vh;
 
     .jw-pic {
         width: 25vh;
@@ -606,7 +627,7 @@ body {
 }
 
 .name-cell-text, .jw-cite {
-    font-family: Tahoma, Verdana, sans-serif;
+    
     padding: 4vh;
     width: 40vh;
     font-size: 2.3vh;
@@ -633,19 +654,31 @@ body {
 }
 
 .mirror-fact {
-    background: $color;
+    background: #d5ad3f;
     color: white;
-    font-family: "Fjalla One", sans-serif;
     transition: 1s ease-in;
+    top: 6vh;
+
+    .mirror-fact-text {
+        padding: 4vh;
+        padding-top: 2vh;
+        font-size: 2vh;
+    }
 
     .mirror-pic {
         width: 100%;
+        height: 50vh;
+        overflow: hidden;
+        display: flex;
         position: relative;
         top: 0;
         left: 0;
+        font-size: 5vh;
+        text-align: center;
+        justify-content: center;
 
         img {
-            width: 100%;
+            height: 100%;
         }
     }
 
@@ -656,43 +689,125 @@ body {
     }
 }
 
+.x-button-mirror {
+    position: absolute;
+    left: 83vh;
+    top: -1vh;
+    color: #d5ad3f;
+    font-size: 5vh;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}
+
 .about-dev-fact {
-    background: #ccaa00;
+    background: $warm-gold;
     color: white;
-    font-family: "Fjalla One", sans-serif;
+    display: grid;
+    height: 50vh;
+    grid-template-columns: 60% auto;
     transition: 1s ease-in;
     opacity: 1;
-
+    top: 20vh;
+    
     .about-dev-pic {
+        display: flex;
+        justify-content: center;
         width: 100%;
+        height: 100%;
         position: relative;
         top: 0;
         left: 0;
+        overflow: hidden;
 
         img {
-            width: 100%;
+            height: 100%;
+            opacity: .7;
         }
     }
 }
 
+.dev-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 2vh;
+
+    .personal-site:hover, .email:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    svg {
+        padding-right: 1vh;
+    }
+}
+
 .about-dev-title {
-    font-size: 7vh;
+    font-size: 5vh;
     text-align: center;
-    padding-top: 4vh;
+    padding-top: 3vh;
+}
+
+.links {
+    font-size: 5vh;
+    padding-bottom: 2vh;
+
+    .personal-site, .email, svg:hover {
+        transform: scale(1.2);
+    }
 }
 
 .about-dev-fact-text {
-    font-family: Tahoma, Verdana, sans-serif;
-    padding: 4vh;
+    padding: 0 4vh;
     width: 90%;
     font-size: 2.3vh;
+    text-align: center;
+}
+
+
+.project-box {
+    text-align: center;
+    padding-top: 3vh;
+    margin: 0;
+    padding: 0;
+    font-family: $title-font;
+    
+    h1 {
+        font-size: 5vh;
+        font-weight: 400;
+    }
+}
+.projects {
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .open-dnd-table:hover, .flux:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
 }
 
 .x-button-about-dev {
     position: absolute;
     left: 83vh;
     top: -1vh;
-    color: $color;
+    color: $warm-gold;
     font-size: 5vh;
     cursor: pointer;
     transition: transform 1s ease-in-out;
@@ -705,9 +820,10 @@ body {
 .duration-fact {
     background: $warm-gold;
     color: white;
-    font-family: "Fjalla One", sans-serif;
     transition: 1s ease-in;
     opacity: 0;
+    text-align: center;
+    top: 6vh;
 
     .duration-pic {
         width: 100%;
@@ -728,14 +844,15 @@ body {
 }
 
 .duration-title {
-    font-size: 7vh;
+    font-size: 5vh;
     text-align: center;
-    padding-top: 4vh;
+    padding-top: 3vh;
 }
 
 .duration-fact-text {
-    font-family: Tahoma, Verdana, sans-serif;
+    
     padding: 4vh;
+    padding-top: 2vh;
     width: 90%;
     font-size: 2.3vh;
 }
@@ -757,9 +874,11 @@ body {
 .mission-fact {
     background: $color;
     color: white;
-    font-family: "Fjalla One", sans-serif;
     opacity: 0;
     transition: 1s ease-in;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 40vh 10vh 21.5vh 6.5vh 12vh 0;
 
     .mission-navbar {
         display: flex;
@@ -767,8 +886,7 @@ body {
         font-size: 2.3vh;
         height: 4.5vh;
         font-family: $italic-font;
-        padding: 2vh;
-        padding-bottom: 0;
+        padding: 1vh;
         color: $color;
         transition: all 2s ease-in;
         transform: translate3d(0px, 0px, 0px);
@@ -780,8 +898,8 @@ body {
             cursor: pointer;
 
             &:hover {
-                border-bottom: .5vh solid $color;
                 transform: scale(1.1);
+                color: $blue-color;
             }
         }
 
@@ -793,20 +911,18 @@ body {
         background-color: white;
         color: $color;
         position: relative;
-        height: 15vh;
+        height: 100%;
         
         .early-days-text, .galaxies-text, .other-worlds-text, .star-lifecycle-text {
             visibility: hidden;
-            font-family: Tahoma, Verdana, sans-serif;
             font-size: 2vh;
-            margin-right: 3.9vh;
-            height: 13vh;
+            height: 100%;
             position: absolute;
             background-color: white;
             color: black;
     
             div {
-                padding: 2vh;
+                padding-right: 2vh;
             }
         }
 
@@ -837,14 +953,13 @@ body {
 }
 
 .mission-title {
-    font-size: 7vh;
+    font-size: 5vh;
     text-align: center;
-    padding-top: 4vh;
+    padding-top: 3vh;
 }
 
 .mission-fact-text {
-    font-family: Tahoma, Verdana, sans-serif;
-    padding: 4vh;
+    padding: 2vh 4vh;
     width: 90%;
     font-size: 2.3vh;
 }
@@ -872,21 +987,27 @@ body {
     100% {
         visibility: visible;
         opacity: 1;
+        z-index: 1;
     }
 }
 
 .hubble-fact {
     background: #ccaa00;
     color: white;
-    font-family: "Fjalla One", sans-serif;
+    
     transition: 1s ease-in;
     opacity: 1;
 
     .hubble-pic {
-        width: 100%;
+        height: 40vh;
         position: relative;
         top: 0;
         left: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
 
         img {
             width: 100%;
@@ -895,13 +1016,13 @@ body {
 }
 
 .hubble-title {
-    font-size: 7vh;
+    font-size: 5vh;
     text-align: center;
-    padding-top: 4vh;
+    padding-top: 3vh;
 }
 
 .hubble-fact-text {
-    font-family: Tahoma, Verdana, sans-serif;
+    
     padding: 4vh;
     width: 90%;
     font-size: 2.3vh;
@@ -924,33 +1045,30 @@ body {
 .about-fact {
     background: #ccaa00;
     color: white;
-    font-family: "Fjalla One", sans-serif;
     transition: 1s ease-in;
     opacity: 1;
+    top: 6vh;
 
     .about-pic {
         width: 100%;
         position: relative;
         top: 0;
         left: 0;
+        display: flex;
+        justify-content: center;
+        background: black;
 
         img {
-            width: 100%;
+            height: 100%;
         }
     }
 }
 
-.about-title {
-    font-size: 7vh;
-    text-align: center;
-    padding-top: 4vh;
-}
-
 .about-fact-text {
-    font-family: Tahoma, Verdana, sans-serif;
     padding: 4vh;
     width: 90%;
-    font-size: 2.3vh;
+    font-size: 2.4vh;
+    text-align: center;
 }
 
 .x-button-about {
@@ -968,40 +1086,80 @@ body {
 }
 
 .instruments-fact {
-    background: #ccaa00;
+    display: grid;
+    grid-template-rows: 30vh 5vh 10vh auto;
+    background: $color;
+    border-radius: 0;
+    width: 110vh;
+    top: 12vh;
     color: white;
-    font-family: "Fjalla One", sans-serif;
-    transition: 1s ease-in;
-    opacity: 1;
+    z-index: -2;
+
+    .first-div-instruments {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 
     .instruments-pic {
-        width: 100%;
-        position: relative;
-        top: 0;
-        left: 0;
+        overflow: hidden;
+        height: 90%;
+        display: flex;
+        align-items: flex-start;
+        border-radius: 5px;
+    }
 
-        img {
-            width: 100%;
+    .instruments-fact-text {
+        font-size: 2vh;
+        padding-left: 6vh;
+        display: flex;
+        align-items: center;
+    }
+
+    ul {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 24vh 24vh 24vh auto;
+        column-gap: 2vh;
+        padding: 0 6vh;
+        align-items: center;
+        list-style: none;
+        text-align: center;
+        font-family: $fact-font;
+        font-style: italic;
+        transition: 1s ease-in-out;
+        background-color: white;
+        color: $color;
+        font-size: 70%;
+
+        li:hover {
+            color: $blue-color;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    }
+
+    .instruments-list-text {
+        height: auto;
+
+        .details-text {
+            visibility: hidden;
+            position: absolute;
+            top: 45vh;
+            padding: 2vh 6vh;
+            background-color: $color;
+            z-index: -2;
+
+            &.visible {
+                visibility: visible;
+            }
         }
     }
 }
 
-.instruments-title {
-    font-size: 7vh;
-    text-align: center;
-    padding-top: 4vh;
-}
-
-.instruments-fact-text {
-    font-family: Tahoma, Verdana, sans-serif;
-    padding: 4vh;
-    width: 90%;
-    font-size: 2.3vh;
-}
-
 .x-button-instruments {
     position: absolute;
-    left: 83vh;
+    left: 111vh;
     top: -1vh;
     color: $color;
     font-size: 5vh;
@@ -1016,30 +1174,34 @@ body {
 .budget-fact {
     background: #ccaa00;
     color: white;
-    font-family: "Fjalla One", sans-serif;
+    
     transition: 1s ease-in;
     opacity: 1;
 
     .budget-pic {
-        width: 100%;
+        height: 40vh;
         position: relative;
         top: 0;
         left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
 
         img {
-            width: 100%;
+            height: 100%;
         }
     }
 }
 
 .budget-title {
-    font-size: 7vh;
+    font-size: 5vh;
     text-align: center;
-    padding-top: 4vh;
+    padding-top: 3vh;
 }
 
 .budget-fact-text {
-    font-family: Tahoma, Verdana, sans-serif;
+    
     padding: 4vh;
     width: 90%;
     font-size: 2.3vh;

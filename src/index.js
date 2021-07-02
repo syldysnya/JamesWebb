@@ -129,7 +129,7 @@ const xButtonBudget = document.getElementById('x-button-budget');
 const xButtonInstruments = document.getElementById('x-button-instruments');
 const xButtonCountdown = document.getElementById('x-button-countdown');
 const nameHistory = document.getElementById('name-cell-box');
-const nameCell = document.getElementById('name-text');
+const nameCell = document.getElementById('name-cell');
 const mirrorCell = document.getElementById('mirror-cell');
 const mirrorFact = document.getElementById('mirror-fact');
 const missionCell = document.getElementById('mission-cell');
@@ -167,7 +167,7 @@ cellCount.addEventListener('click', function() {
     countdownBox.style.animation = 'scaleLaunch 1s forwards';
 });
 
-cellCount.addEventListener('mouseout', function() {
+xButtonCountdown.addEventListener('click', function() {
     countdownBox.style.animation = 'none';
 });
 
@@ -242,6 +242,7 @@ nameCell.addEventListener('click', function() {
 
 mirrorCell.addEventListener('click', function() {
     mirrorFact.classList.add('active');
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards'
 });
 
 xButtonMirror.addEventListener('click', function() {
@@ -251,14 +252,17 @@ xButtonMirror.addEventListener('click', function() {
 
 missionDuration.addEventListener('click', function() {
     missionDurationFact.classList.add('active');
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards'
 });
 
 xButtonDuration.addEventListener('click', function() {
     missionDurationFact.classList.remove('active');
+    hegaxonBox.style.animation = 'none';
 });
 
 missionCell.addEventListener('click', function() {
     missionFact.classList.add('active');
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards'
 });
 
 function resetVisible() {
@@ -297,40 +301,77 @@ xButtonMission.addEventListener('click', function() {
 
 hubbleCell.addEventListener('click', function() {
     hubbleFact.style.animation = 'factAnimation 2s forwards';
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards'
 });
 
 xButtonHubble.addEventListener('click', function() {
     hubbleFact.style.animation = 'none';
+    hegaxonBox.style.animation = 'none';
 });
 
 budgetCell.addEventListener('click', function() {
     budgetFact.style.animation = 'factAnimation 2s forwards';
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards'
 });
 
 xButtonBudget.addEventListener('click', function() {
     budgetFact.style.animation = 'none';
+    hegaxonBox.style.animation = 'none';
 });
 
 devCell.addEventListener('click', function() {
     aboutDevFact.style.animation = 'factAnimation 2s forwards';
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards'
 });
 
 xButtonAboutDev.addEventListener('click', function() {
     aboutDevFact.style.animation = 'none';
+    hegaxonBox.style.animation = 'none';
 });
 
 instrumentsCell.addEventListener('click', function() {
     instrumentsFact.style.animation = 'factAnimation 2s forwards';
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards'
+});
+
+function resetVisibleInstruments() {
+    spectrText.classList.remove('visible');
+    sensorText.classList.remove('visible');
+    instrumentText.classList.remove('visible');
+    cameraText.classList.remove('visible');
+}
+
+camera.addEventListener('mouseover', function() {
+    resetVisibleInstruments();
+    cameraText.classList.add('visible');
+});
+
+spectr.addEventListener('mouseover', function() {
+    resetVisibleInstruments();
+    spectrText.classList.add('visible');
+});
+
+instrument.addEventListener('mouseover', function() {
+    resetVisibleInstruments();
+    instrumentText.classList.add('visible');
+});
+
+sensor.addEventListener('mouseover', function() {
+    resetVisibleInstruments();
+    sensorText.classList.add('visible');
 });
 
 xButtonInstruments.addEventListener('click', function() {
     instrumentsFact.style.animation = 'none';
+    hegaxonBox.style.animation = 'none';
 });
 
 aboutCell.addEventListener('click', function() {
     aboutFact.style.animation = 'factAnimation 2s forwards';
+    hegaxonBox.style.animation = 'hexagonBoxMiddle 2s forwards'
 });
 
 xButtonAbout.addEventListener('click', function() {
     aboutFact.style.animation = 'none';
+    hegaxonBox.style.animation = 'none';
 });
