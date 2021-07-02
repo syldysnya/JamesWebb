@@ -42,7 +42,7 @@ body {
     visibility: hidden;
     z-index: 1;
     transition: 1s;
-    opacity: .5;
+    opacity: .7;
 
     &:hover {
         opacity: 1;   
@@ -57,6 +57,7 @@ body {
     bottom: 0;
     margin: auto;
     visibility: visible;
+    opacity: .7;
 }
 
 .cells {
