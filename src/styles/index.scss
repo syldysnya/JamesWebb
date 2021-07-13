@@ -38,6 +38,35 @@ body {
     cursor: pointer;
 }
 
+.cell-toggle {
+    animation: scaling 3s linear infinite running;
+    transition: 400ms;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font;
+    color: black;
+}
+
+@keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#dev-cell, #about-cell {
+    background-color: #b4b4b4;
+}
+
 .cell {
     visibility: hidden;
     z-index: 1;
