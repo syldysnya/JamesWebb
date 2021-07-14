@@ -1,28 +1,39 @@
 # James Webb Space Telescope
-## Background and Overview
+## Overview
 *Webb will be the largest, most powerful and complex space telescope ever built and launched into space. It will fundamentally alter our understanding of the universe. (c)*
 
-This project is created to countdown until launch time and provide users with information about this ambitious project.
+This project is about the largest and the most ambitious space prject James Webb Space Telescope. You can learn more information about it on the website.
 
-## Functionality and MVPs
-### Countdown
-Main page will have a countdown to the launch of the James Webb Space Telescope
+## Features
+First appears one hexagon cell. If user clicks on it it will open 'mirrors'. Responsive honeycomb grid imitates the mirrors of James Webb Telescope.
+![james-main](https://user-images.githubusercontent.com/78821780/125646838-35c5334b-4728-4f26-9420-dd2fe2f7e522.gif)
 
-### Information about the telescope
-User will be able to find an information about the James Webb telescope with a mouse click
+User can click on cells to find more information about the James Webb.
+![james-menu](https://user-images.githubusercontent.com/78821780/125648030-c7dc1257-e007-48f1-8169-ce3bb12c06db.gif)
 
-### About
-User will see a short information about this project and links to a developer pages.
+## Code Snippet
+```js
+function countdown() {
+    const launchDate = new Date(launch);
+    const currentDate = new Date();
+    
+    const secsTotal = Math.floor((launchDate - currentDate) / 1000);
+    const days = Math.floor(secsTotal / 24 / 3600);
+    const hours = Math.floor(secsTotal / 3600) % 24;
+    const mins = Math.floor(secsTotal / 60) % 60;
+    const secs = Math.floor(secsTotal % 60);
 
-## Architecture and Technology
-- HTML, CSS, and JavaScript
-- DOM manipulation
+    boxDays.innerHTML = formatTime(days);
+    boxHours.innerHTML = formatTime(hours);
+    boxMins.innerHTML = formatTime(mins);
+    boxSecs.innerHTML = formatTime(secs);
+};
 
-## Wireframes
-![Screenshot 2021-07-02 171835](https://user-images.githubusercontent.com/78821780/124329523-9008cc00-db59-11eb-95a9-41c5cac21deb.png)
+function formatTime(time) {
+    return time < 10 ? (`0${time}`) : (time)
+}
+setInterval(countdown, 1000);
+```
 
-## Implementation Timeline
-- Setting up environment for a project, reading documentations (1 day)
-- A countdown info panel (0.5 day)
-- CSS (2.5 day)
-- JavScript (1 day)
+## Technologies
+This project was built using Javascript, CSS and HTML.
